@@ -1,5 +1,8 @@
 @import "styles/settings/__settings";
+@import "styles/_theme";
 @import "style.css";
+
+/* Diğer mevcut stiller buraya geliyor */
 
 * {
   box-sizing: border-box;
@@ -10,6 +13,9 @@ body {
   padding: 0;
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica Neue, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  transition: background 0.2s, color 0.2s;
 }
 
 p {
