@@ -7,7 +7,7 @@ const Header = ({ children }) => {
 
   return (
     <header className={styles.header}>
-      <Container>
+      <div>
         <div className={styles['header-info']}>{children}</div>
         <button
           onClick={toggleTheme}
@@ -20,7 +20,7 @@ const Header = ({ children }) => {
         >
           {theme === 'dark' ? '☀️ Light Mode' : '🌙 Dark Mode'}
         </button>
-      </Container>
+      </div>
     </header>
   );
 };
