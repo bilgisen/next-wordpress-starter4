@@ -1,6 +1,7 @@
 import { useRouter } from 'next/router';
 import { Helmet } from 'react-helmet';
 import styles from './Layout.module.scss';
+import Header from 'components/Header';
 
 import useSite from 'hooks/use-site';
 import { helmetSettingsFromMetadata } from 'lib/site';
