@@ -12,22 +12,19 @@ import styles from 'styles/pages/Home.module.scss';
 
 export default function Home({ posts, pagination }) {
   const { metadata = {} } = useSite();
-  const { title } = metadata;
 
   return (
-    <Layout>
-      <WebsiteJsonLd siteTitle={title} />
+    <Layout metadata={metadata}>
+      <WebsiteJsonLd siteTitle={metadata.title} />
       <Section>
         <Container>
           <h2 className="sr-only">Posts</h2>
           <ul className={styles.posts}>
-            {posts.map((post) => {
-              return (
-                <li key={post.slug}>
-                  <PostCard post={post} />
-                </li>
-              );
-            })}
+            {posts.map((post) => (
+              <li key={post.slug}>
+                <PostCard post={post} />
+              </li>
+            ))}
           </ul>
           {pagination && (
             <Pagination
