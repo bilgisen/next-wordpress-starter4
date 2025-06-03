@@ -8,11 +8,12 @@ const Header = ({ children }) => {
   return (
     <header className={styles.header}>
       <Container>
-        {children}
+        <div className={styles['header-info']}>
+          {children}
+        </div>
         <button
           onClick={toggleTheme}
           style={{
-            marginLeft: 'auto',
             padding: '0.5em 1em',
             borderRadius: '6px',
             cursor: 'pointer',

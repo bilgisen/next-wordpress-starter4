@@ -1,15 +1,22 @@
 @import "styles/settings/__settings";
-
 @import "styles/components/_container";
 
 .header {
   margin: 5rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  /* H1 ve P'yi gruplayıp, butondan ayırmak için bir .header-info sınıfı eklemen önerilir */
+  .header-info {
+    flex: 1 1 auto;
+    text-align: left;
+  }
 
   h1 {
     margin: 0;
     line-height: 1.15;
     font-size: 3rem;
-    text-align: center;
 
     @media (min-width: 480px) {
       font-size: 4rem;
