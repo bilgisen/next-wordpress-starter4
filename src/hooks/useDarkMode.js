@@ -1,24 +1,27 @@
-// bu dosyayı src/hooks/useDarkMode.js olarak oluştur
-import { useEffect, useState } from "react";
+import { useEffect, useState } from 'react';
 
 export default function useDarkMode() {
-  const [theme, setTheme] = useState("light");
+  const [theme, setTheme] = useState('light');
+
   useEffect(() => {
-    const userTheme = localStorage.getItem("theme");
+    // Kullanıcı tercihi varsa onu kullan, yoksa sistem temasını kullan
+    const userTheme = localStorage.getItem('theme');
     if (userTheme) {
       setTheme(userTheme);
-      document.documentElement.setAttribute("data-theme", userTheme);
+      document.documentElement.setAttribute('data-theme', userTheme);
     } else {
-      const sysTheme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+      const sysTheme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
       setTheme(sysTheme);
-      document.documentElement.setAttribute("data-theme", sysTheme);
+      document.documentElement.setAttribute('data-theme', sysTheme);
     }
   }, []);
+
   const toggleTheme = () => {
-    const newTheme = theme === "light" ? "dark" : "light";
+    const newTheme = theme === 'light' ? 'dark' : 'light';
     setTheme(newTheme);
-    document.documentElement.setAttribute("data-theme", newTheme);
-    localStorage.setItem("theme", newTheme);
+    document.documentElement.setAttribute('data-theme', newTheme);
+    localStorage.setItem('theme', newTheme);
   };
+
   return [theme, toggleTheme];
 }

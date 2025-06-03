@@ -12,14 +12,14 @@ const Header = ({ children }) => {
         <button
           onClick={toggleTheme}
           style={{
-            marginLeft: "auto",
-            padding: "0.5em 1em",
-            borderRadius: "6px",
-            cursor: "pointer"
+            marginLeft: 'auto',
+            padding: '0.5em 1em',
+            borderRadius: '6px',
+            cursor: 'pointer',
           }}
-          aria-label="Dark mode toggle"
+          aria-label='Dark mode toggle'
         >
-          {theme === "dark" ? "☀️ Light Mode" : "🌙 Dark Mode"}
+          {theme === 'dark' ? '☀️ Light Mode' : '🌙 Dark Mode'}
         </button>
       </Container>
     </header>
