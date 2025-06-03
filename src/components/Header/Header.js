@@ -8,9 +8,7 @@ const Header = ({ children }) => {
   return (
     <header className={styles.header}>
       <Container>
-        <div className={styles['header-info']}>
-          {children}
-        </div>
+        <div className={styles['header-info']}>{children}</div>
         <button
           onClick={toggleTheme}
           style={{
