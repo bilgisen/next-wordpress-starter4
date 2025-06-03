@@ -17,7 +17,7 @@ const Header = ({ children }) => {
             borderRadius: '6px',
             cursor: 'pointer',
           }}
-          aria-label='Dark mode toggle'
+          aria-label="Dark mode toggle"
         >
           {theme === 'dark' ? '☀️ Light Mode' : '🌙 Dark Mode'}
         </button>
