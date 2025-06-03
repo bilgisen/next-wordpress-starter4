@@ -1,4 +1,3 @@
-import Container from 'components/Container';
 import styles from './Header.module.scss';
 import useDarkMode from '../../hooks/useDarkMode';
 
