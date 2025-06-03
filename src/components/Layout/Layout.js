@@ -33,9 +33,6 @@ const Layout = ({ children }) => {
           type: 'application/rss+xml',
           href: '/feed.xml',
         },
-
-        // Favicon sizes and manifest generated via https://favicon.io/
-
         {
           rel: 'apple-touch-icon',
           sizes: '180x180',
@@ -66,6 +63,11 @@ const Layout = ({ children }) => {
       <Helmet {...helmetSettings} />
 
       <Nav />
+
+      <Header>
+        <h1>{metadata.title}</h1>
+        {metadata.description && <p>{metadata.description}</p>}
+      </Header>
 
       <Main>{children}</Main>
 
